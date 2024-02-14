@@ -1,0 +1,121 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prediction Model</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 12px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            width: 80%;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="file"]:hover,
+        input[type="file"]:focus {
+            border-color: #2980b9;
+        }
+
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #219a52;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Prediction Model</h1>
+    
+    <form action="predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <input type="submit" name="button" value="Predict">
+    </form>
+</body>
+</html>
+-->
+<!--merged code-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prediction Model</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Prediction Model</h1>
+
+    {% if show_form %}
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <input type="submit" name="button" value="Predict">
+    </form>
+    {% else %}
+    <div align="center">
+        <h1>Welcome to Prediction</h1>
+        <h3>Prediction is: {{ data }}</h3>
+    </div>
+    {% endif %}
+</body>
+</html>
+
